@@ -1,6 +1,7 @@
-<!-- Projecte MALDÀ -->
+<!-- Projecte MALDÀ 4 -->
 
 <!doctype html>
+<html>
 
 <head>
   <meta charset="utf-8">
@@ -9,52 +10,75 @@
 
   <link rel="stylesheet" href="css/normalize.css">
 
-  <link rel="stylesheet" href="css/estils.css">
+  <link rel="stylesheet" href="css/estils3.css">
 
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous"><!-- afegim AQUEST full estils de fontawesome per integrar les icones de xxss -->
 
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">  <!-- link de google fonts per Open Sans, sel·leccionant les variants regular i Bold -->
+
+  <script src="js/script.js"></script>
+
 </head>
 
 <body>
 
   <!-- A. HEADER -->
   <header class="site-header">
-    <section class="fustes seccio parallax">
-      <div class="top clearfix">
-          <div id="logo" class="logo">
-            <img src="img/Logo-Malda-ok.jpg" alt="logo Disseny Maldà Recicla">
+    <section class="butaques seccio parallax">
+      <div class="div-header">
+
+        <!-- Menús x mòbil -->
+
+        <div class="top-mobil">
+          <div class="esquerra">
+            <!-- div buit -->
           </div>
 
-          <div class="nologo">
+          <div id="logo-mobil">
+            <img src="img/Logo-Malda-okok.png" alt="logo Disseny Maldà Recicla">
+          </div>
 
-            <div class="menu-movil">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
+          <div class="menu-mobil">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
 
-            <nav class="navegacio-principal">
-              <a href="#quisom">Qui som i què fem</a>
-              <a href="#cataleg">Catàleg</a>
-              <a href="#on-trobar">On trobar els nostres productes</a>
-              <a href="#contacte">Contacte</a>
-            </nav>
+        <div class="bottom-mobil">
+          <h2>Mobles i objectes<br>d'<span>Artesania Sostenible</span></h2>
+        </div>
 
-            <nav class="xarxes navegacio-principal">
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-instagram"></i></a>
-            </nav>
+        <!-- Menús x pantalla gran -->
 
-            <div class="destacado">
-                <h2>Mobles i objectes<br>d'<span>Artesania Sostenible</span></h2>
-            </div><!-- .destacado -->
-          </div><!-- nologo -->
-      </div><!-- .top -->
+        <div class="top-laptop clearfix">
+          <nav class="navegacio-principal">
+            <a href="#quisom">Qui som i què fem</a>
+            <a href="#cataleg">Catàleg</a>
+            <a href="#on-trobar">On trobar els nostres productes</a>
+            <a href="#contacte">Contacte</a>
+          </nav>
+
+          <nav class="xarxes">
+            <a href="https://www.facebook.com/dissenymaldarecicla/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/dissenymaldarecicla4/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </nav>
+        </div><!-- .top -->
+
+        <div class="bottom-laptop">
+          <div id="logo" class="logo">
+            <img src="img/Logo-Malda-okok.png" alt="logo Disseny Maldà Recicla">
+          </div>
+
+          <div class="destacado">
+              <h2>Mobles i objectes<br>d'<span>Artesania Sostenible</span></h2>
+          </div><!-- .destacado -->
+        </div><!-- .bottom -->
+
+      </div><!-- .div-header -->
+
     </section>
 
-    <div class="hero"><!-- div.hero serveix per afegir imatge de fons -->
-    </div><!-- .hero -->
   </header>
 
   <!-- B. QUISOM -->
@@ -66,16 +90,26 @@
       </div>
 
       <div class="contingut clearfix">
-        <div class="descripcio">
+
+        <!-- Duplico text per adaptar-lo a 3 i 2 columnes -->
+        <div class="descripcio-3C">
           <p>A <span>Disseny Maldà Recicla</span> creem mobles i objectes per a la casa, donant una segona vida a la fusta de palets reciclats.</p>
           <br>
           <p>A partir del més humil dels materials, al poble de Maldà (l'Urgell), creem butaques, taules, casetes per a gos i per a gat, i altres objectes per a la llar, perquè en gaudiu vosaltres i les vostres mascotes.</p>
-        </div><!-- .descripcio -->
+        </div><!-- .descripcio-3C -->
+
+        <div class="descripcio-2C">
+          <p>A <span>Disseny Maldà Recicla</span> creem mobles i objectes per a la casa, donant una segona vida a la fusta de palets reciclats.</p>
+        </div>
+        <div class="descripcio-2C">
+          <p>A partir del més humil dels materials, al poble de Maldà (l'Urgell), creem butaques, taules, casetes per a gos i per a gat, i altres objectes per a la llar, perquè en gaudiu vosaltres i les vostres mascotes.</p>
+        </div><!-- .descripcio-2C -->
+
         <div class="imatge">
-            <img src="img/Jardinera-1-bx-sq.jpg" alt="Moble per testos">
+            <img src="img/DSC_0868-Jardinera-sq.jpg" alt="Moble per testos">
         </div><!-- .imatge -->
         <div class="imatge">
-          <img src="img/Caseta-gat-2-bx-sq.jpg" alt="Caseta per gats">
+          <img src="img/DSC_0852-Cofre-nansa-sq.jpg" alt="Cofre, detall">
         </div><!-- .imatge -->
       </div><!-- .contingut -->
 
@@ -88,22 +122,27 @@
     <div class="auxiliar clearfix">
 
       <div class="imatge">
-          <img src="img/Jardinera-1-bx-sq.jpg" alt="Moble per testos">
+          <img src="img/DSC_0870-Fassana-sq.jpg" alt="Façana taller">
       </div>
       <div class="imatge">
-        <img src="img/Caseta-gat-2-bx-sq.jpg" alt="Caseta per gats">
+        <img src="img/DSC_0888-Eines-sq.jpg" alt="Interior taller">
       </div>
 
-      <div class="descripcio2">
+      <div class="descripcioB-3C">
         <p>Aquí hi anirien un parell de fotos del taller i una breu descripció del procés d'elaboració dels productes, des del tractament dels taulons de palet fins a l'acabat final. </p>
-        <br>
         <p>Nam ullamcorper, elit a ornare pharetra, ex ex eleifend erat, eu congue lectus massa eu lorem. Curabitur et egestas eros. Maecenas eget porta lacus, vel sagittis enim. Vestibulum ut lacus in purus malesuada tincidunt ut eget ipsum. In tempus odio urna, vel tincidunt nunc blandit ac. </p>
-      </div><!-- .descripcio2 -->
+      </div><!-- .descripcioB-3C -->
+      <div class="descripcioB-2C">
+        <p>Aquí hi anirien un parell de fotos del taller i una breu descripció del procés d'elaboració dels productes, des del tractament dels taulons de palet fins a l'acabat final.</p>
+      </div>
+      <div class="descripcioB-2C">
+        <p>Nam ullamcorper, elit a ornare pharetra, ex ex eleifend erat, eu congue lectus massa eu lorem. Curabitur et egestas eros. Maecenas eget porta lacus, vel sagittis enim. Vestibulum ut lacus in purus malesuada tincidunt ut eget ipsum. In tempus odio urna, vel tincidunt nunc blandit ac. </p>
+      </div><!-- .descripcioB-2C -->
 
     </div><!-- .auxiliar -->
   </section><!-- secció C parallax -->
 
-  <!-- D. CATÀLEG -->
+  <!-- D. CATÀLEG #######################-->
   <section id="cataleg" class="seccio">
     <div class="div-seccio">
 
@@ -111,81 +150,196 @@
         <h3>Catàleg de productes</h3>
       </div>
 
-      <div class="contingut clearfix">
+      <div class="contingut quadricula">
+
         <div class="producte">
+          <div class="imatge-cataleg">
+            <img class="hover-shadow cursor" src="img/DSC_0838-Butaca-150.png" alt="Butaca"  onclick="openModal();currentSlide(1); closeModal2();" >
+          </div>
           <h4><span>Butaca Maldà</span></h4>
           <br>
-          <div class="imatge-cataleg">
-            <img src="img/Butaca-3-sq.jpg" alt="Butaca">
-          </div>
-          <br>
           <p>Nulla at nulla non massa porttitor rhoncus a non lacus. Suspendisse potenti. Nulla malesuada ante pharetra, dignissim ex vitae.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
         </div><!-- .producte -->
 
         <div class="producte">
+          <div class="imatge-cataleg">
+            <img class="hover-shadow cursor" src="img/DSC_0841-Taula-150.png" alt="Taula" onclick="openModal2();currentSlide2(1);closeModal3()">
+          </div>
           <h4><span>Taula Urgell</span></h4>
           <br>
+          <p>Donec volutpat mi eleifend lacinia ultricies. Praesent aliquet tempus eros, vel commodo orci suscipit sed. Duis suscipit lacus porttitor porttitor.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
+        </div><!-- .producte -->
+
+        <div class="producte">
           <div class="imatge-cataleg">
-            <img src="img/Taula-1-sq.jpg" alt="Taula">
+            <img class="hover-shadow cursor" src="img/DSC_0843-Cadira-150.png" alt="Cadira"   onclick="openModal3();currentSlide3(1); closeModal();closeModal2()">
           </div>
+          <h4><span>Cadira Alta</span></h4>
           <br>
           <p>Donec volutpat mi eleifend lacinia ultricies. Praesent aliquet tempus eros, vel commodo orci suscipit sed. Duis suscipit lacus porttitor porttitor.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
         </div><!-- .producte -->
 
         <div class="producte">
+          <div class="imatge-cataleg">
+            <img class="hover-shadow cursor" src="img/DSC_0853-CofreObert-150.png" alt="Cofre">
+          </div>
+          <h4><span>Cofre Jamaica</span></h4>
+          <br>
+          <p>Donec volutpat mi eleifend lacinia ultricies. Praesent aliquet tempus eros, vel commodo orci suscipit sed. Duis suscipit lacus porttitor porttitor.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
+        </div><!-- .producte -->
+
+        <div class="producte">
+          <div class="imatge-cataleg">
+            <img class="hover-shadow cursor" src="img/Caseta-gat-1-sq.jpg" alt="Caseta per gats">
+          </div>
           <h4><span>Caseta Bastet</span></h4>
           <br>
-          <div class="imatge-cataleg">
-            <img src="img/Caseta-gat-1-sq.jpg" alt="Caseta per gats">
-          </div>
-          <br>
           <p>Fusce vel mollis nulla. Proin est lorem, facilisis a arcu vel, pulvinar rutrum massa. Duis vel tempus nisi, eget vulputate nulla. Proin est lorem.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
         </div><!-- .producte -->
 
         <div class="producte">
+          <div class="imatge-cataleg">
+            <img class="hover-shadow cursor" src="img/Caseta-gos-2-sq.jpg" alt="Caseta de gos">
+          </div>
           <h4><span>Caseta Anubis</span></h4>
           <br>
-          <div class="imatge-cataleg">
-            <img src="img/Caseta-gos-2-sq.jpg" alt="Caseta de gos">
-          </div>
-          <br>
           <p>Duis consequat venenatis augue, vel finibus nisl sodales vitae. Nulla sagittis tellus sed libero dapibus dignissim. Aliquam erat volutpat.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
         </div><!-- .producte -->
 
         <div class="producte">
+          <div class="imatge-cataleg">
+            <img class="hover-shadow cursor" src="img/Caseta-gos-2-sq.jpg" alt="Moble jardinera">
+          </div>
           <h4><span>Jardinera Riucorb</span></h4>
           <br>
-          <div class="imatge-cataleg">
-            <img src="img/Caseta-gos-2-sq.jpg" alt="Moble jardinera">
-          </div>
-          <br>
           <p>Duis consequat venenatis augue, vel finibus nisl sodales vitae. Nulla sagittis tellus sed libero dapibus dignissim. Aliquam erat volutpat.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
         </div><!-- .producte -->
 
         <div class="producte">
+          <div class="imatge-cataleg">
+            <img class="hover-shadow cursor" src="img/DSC_0838-Butaca-150.png" alt="Moble jardinera">
+          </div>
           <h4><span>Canelobre Alfa</span></h4>
           <br>
-          <div class="imatge-cataleg">
-            <img src="img/Butaca-3-sq.jpg" alt="Moble jardinera">
-          </div>
-          <br>
           <p>Aenean lectus arcu, facilisis vel augue ut, fermentum accumsan ligula. Aenean feugiat mattis imperdiet. Donec in eleifend tortor.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
         </div><!-- .producte -->
 
         <div class="producte">
+          <div class="imatge-cataleg">
+            <img class="hover-shadow cursor" src="img/Biblio-2-sq.jpg" alt="Moble jardinera">
+          </div>
           <h4><span>Biblioteca Beta</span></h4>
           <br>
+          <p>Duis risus turpis, pretium quis justo vel, iaculis fermentum velit. Praesent auctor diam vitae mauris condimentum, sed sodales orci faucibus.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
+        </div><!-- .producte -->
+
+        <div class="producte">
           <div class="imatge-cataleg">
-            <img src="img/Biblio-2-sq.jpg" alt="Moble jardinera">
+            <img class="hover-shadow cursor" src="img/DSC_0860-CaixaBirra-150.png" alt="Caixa Cerveses">
           </div>
+          <h4><span>Caixa Cerveses</span></h4>
           <br>
           <p>Duis risus turpis, pretium quis justo vel, iaculis fermentum velit. Praesent auctor diam vitae mauris condimentum, sed sodales orci faucibus.</p>
+          <p><span>Dimensions:  </span><strong>Alt, </strong>70 cm. <strong>Ample, </strong>80 cm. <strong>Fons, </strong>60 cm. </p>
+          <p><span>Pes: </span>5,5 Kg. </p>
         </div><!-- .producte -->
 
       </div><!-- contingut-seccio -->
     </div><!-- .div-seccio -->
 
   </section><!-- #cataleg -->
+
+
+  <section><!-- modals -->
+
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+
+      <div class="modal-content">
+
+       <div class="mySlides">
+         <div class="numbertext">Butaca Maldà 1 / 3</div>
+         <img src="img/DSC_0838-Butaca-150.jpg" class="center">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">Butaca Maldà 2 / 3</div>
+         <img src="img/DSC_0836-ButacaB-150.jpg" class="center">
+       </div>
+
+       <div class="mySlides">
+         <div class="numbertext">Butaca Maldà 3 / 3</div>
+         <img src="img/DSC_0839-ButacaC-150.jpg" class="center">
+       </div>
+
+       <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+     </div>
+    </div>
+
+    <div id="myModal2" class="modal2">
+      <span class="close cursor" onclick="closeModal2()">&times;</span>
+
+      <div class="modal-content">
+
+        <div class="mySlides2">
+          <div class="numbertext">Taula Urgell 1 / 2</div>
+          <img src="img/DSC_0841-TaulaA-150c.jpg" class="center">
+        </div>
+
+        <div class="mySlides2">
+          <div class="numbertext">Taula Urgell 2 / 2</div>
+          <img src="img/DSC_0842-TaulaB-150c.jpg" class="center">
+        </div>
+
+        <a class="prev" onclick="plusSlides2(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides2(1)">&#10095;</a>
+
+      </div>
+    </div>
+
+   <div id="myModal3" class="modal3">
+     <span class="close cursor" onclick="closeModal3()">&times;</span>
+
+     <div class="modal-content">
+
+       <div class="mySlides3">
+         <div class="numbertext">Cadira Alta 1 / 2</div>
+         <img src="img/DSC_0843-Cadira-150b.jpg" class="center">
+       </div>
+
+       <div class="mySlides3">
+         <div class="numbertext">Cadira Alta 2 / 2</div>
+         <img src="img/DSC_0844-CadiraB-150b.jpg" class="center">
+       </div>
+
+       <a class="prev" onclick="plusSlides3(-1)">&#10094;</a>
+       <a class="next" onclick="plusSlides3(1)">&#10095;</a>
+
+     </div>
+   </div>
+
+  </section>
+
 
   <!-- E. ON TROBAR PRODUCTES -->
   <section id="on-trobar" class="fustes seccio parallax">
@@ -237,18 +391,18 @@
 
   <!-- F. footer CONTACTE -->
   <footer id="contacte" class="clearfix">
-    <div class="div-seccio">
-
-      <div class="naming">
-        <h3>DISSENY MALDÀ RECICLA</h3>
-      </div>
+    <div class="div-seccio poble">
 
       <div class="adressa">
         <p>Carretera de Rocallaura, 27<br>17800 Maldà<br>Telf: 123 456 789<br>malda@dissenymaldarecicla.com<br>www.dissenymaldarecicla.com</p>
         <nav class="xarxes-footer">
-          <a href="#"><i class="fab fa-facebook-f"></i></a>
-          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="https://www.facebook.com/dissenymaldarecicla/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/dissenymaldarecicla4/" target="_blank"><i class="fab fa-instagram"></i></a>
         </nav>
+      </div>
+
+      <div class="naming">
+        <h3>DISSENY MALDÀ RECICLA</h3>
       </div>
 
       <div class="logo-footer">

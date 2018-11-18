@@ -1,0 +1,1040 @@
+/*
+Projecte MALDÀ 4 - CSS
+========================================== */
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================
+ESTILS GLOBALS
+========================================== */
+
+/* Box-sizing: border-box */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* clearfix */
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* definim tipo global Open Sans i color corporatiu */
+body {
+  font-family: 'Open Sans', sans-serif;
+  --granate: rgb(110, 43, 46);
+  margin: 0;
+  padding: 0;
+}
+
+
+/** FONT-SIZES **/
+
+html {
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 3rem; /* 48px */
+  font-weight: bold;
+  color: var(--granate);
+  text-align: center;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+h2 span {
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 2rem; /* 32px */
+  font-weight: bold;
+  color: var(--granate);
+  text-align: left;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+h3 span {
+  text-transform: uppercase;
+}
+
+h4 {
+  font-size: 1.5rem; /* 24px */
+  font-weight: bold;
+  color: var(--granate);
+  text-align: left;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+h4 span {
+  text-transform: uppercase;
+}
+
+h5 {
+  font-size: 1.25rem; /* 20px */
+  font-weight: bold;
+  color: var(--granate);
+  text-align: left;
+  text-transform: none;
+  margin: 0;
+  padding: 0;
+}
+h5 span {
+  text-transform: uppercase;
+}
+
+p {
+  font-size: 14px; /* 14px = 0.875rem */
+  line-height: 18px; /* 18px = 1.125rem */
+  font-weight: regular;
+  color: rgb(0, 0, 0);
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+p span {
+  font-weight: bold;
+  color: var(--granate);
+  text-transform: uppercase;
+}
+
+/* Medi queries s/html font-size */
+/* proporció font-size:16px >992 */
+
+/* mq 992px = 62rem */
+@media only screen and (max-width:992px) {
+  html {
+    font-size: 14px;
+  }
+  p {
+    font-size: 13px;
+    line-height: 16.7px;
+  }
+}
+
+/* mq 768px = 48rem */
+@media only screen and (max-width:768px) {
+  html {
+    font-size: 12px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 15.4px;
+  }
+}
+
+/* mq 600px = 37.5rem */
+@media only screen and (max-width:600px) {
+  html {
+    font-size: 10px;
+  }
+  p {
+    font-size: 11px;
+    line-height: 14.1px;
+  }
+}
+
+/* mq 480px = 30rem */
+@media only screen and (max-width:480px) {
+  html {
+    font-size: 8px;
+  }
+  p {
+    font-size: 10px;
+    line-height: 12.8px;
+  }
+}
+
+
+/* Altres estils genèrics */
+
+li {
+  list-style: none;
+}
+
+
+
+/** ==================================
+Estructura genèrica SECCIONS i DIVs
+=================================== **/
+
+/* SENSE PARALLAX:
+<section.seccio>
+  <div.div-seccio>
+    <div.titol>
+    <div.contingut> pot contenir algun d'aquests:
+      <div.descripcio>
+      <div.imatge>
+      <div.producte>
+  */
+
+  /* AMB PARALLAX:
+  <section.seccio>
+    <div.auxiliar>
+      <div.titol>
+      <div.contingut> pot contenir algun d'aquests:
+        <div.descripcio>
+        <div.imatge>
+        <div.producte>
+    */
+
+section.seccio {
+  margin: 0;
+  padding: 0;
+  height: auto;
+}
+
+div.div-seccio {
+  padding: 1.25rem 3.125rem; /* 1.25em = 20px, 3.125em = 50px */
+}
+
+div.titol, div.contingut {
+  margin: 0;
+  padding: 0;
+}
+
+div.titol h3 {
+  margin: 0;
+  padding: 1.25rem 1.875rem 0 1.875rem; /* 1.25rem = 20px, 1.875rem = 30px */
+}
+
+
+
+/* ===========================================
+ESTILS LOCALS
+========================================== */
+
+/*** A. HEADER ***/
+
+header {
+  margin: 0;
+  padding: 0;
+}
+
+/** Parallax **/
+
+.parallax::before {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+section.butaques {
+  position: relative;
+  height: 100vh;
+}
+section.butaques::before {
+  background-image: url(../img/DSC_0905-ButaquesTaula-modif-1200-retall.jpg);
+  background-position: bottom center; /* centrem la imatge */
+  background-size: cover; /* permet que es vegi TOTA la imatge */
+  content: '';
+}
+
+.div-header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/** Versió mòbil **/
+
+div.top-mobil { /* grid */
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  padding: 2.50rem 5%; /* 40px  */
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+div#logo-mobil {
+  width: 100%;
+  height: auto;
+}
+
+div#logo-mobil img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+/** MENÚ MÒBIL **/
+/* Hamburguesa menu Mobile First: quadrat de 56 px de costat */
+div.menu-mobil {
+  display: block;
+  justify-self: end;
+}
+/* configuració spans: jugant amb margins i tamanys aconseguim l'efecte desitjat */
+div.menu-mobil span {
+  height: 0.5rem; /* 8px */
+  width: 3rem; /*  */
+  margin-bottom: 0.75rem; /*  */
+  background-color: #ffffff;
+  display: block;
+}
+
+
+div.bottom-mobil {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 90%;
+  padding: 2.5rem 0;
+  display: grid;
+  grid-template-columns: 100%;
+}
+div.bottom-mobil h2{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+/* media query per ocultar menús mòbil 600px = 37.5rem */
+@media only screen and (min-width:600px) {
+  div.top-mobil {
+    display: none;
+  }
+  div.bottom-mobil {
+    display: none;
+  }
+}
+
+
+
+
+/** Versió ordinador **/
+/* Desktop first */
+
+/* BARRA NAVEGACIÓ */
+
+div.top-laptop {
+  height: auto;
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 1.25rem; /* 1.25em = 20px */
+}
+
+
+/* MENÚ NAVEGACIÓ PRINCIPAL */
+
+nav.navegacio-principal {
+  display: block;
+  float: left;
+}
+nav.navegacio-principal a {
+  display: inline-block; /* imprescindible perquè rutlli efecte escala en hover */
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+  padding: 0.625rem 1.875rem 0 0; /* 10px 30px 0 0 */
+  transition: all .5s ease-in-out; /* transició sempre en l'estat de repòs */
+}
+
+/* efecte hover */
+nav.navegacio-principal a:hover {
+  transform: scale(1.2);
+}
+
+/* Xarxes socials */
+
+nav.xarxes {
+  display: block;
+  float: right;
+}
+
+nav.xarxes a {
+  display: inline-block; /* imprescindible perquè rutlli efecte escala en hover */
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5rem; /* 1.5rem = 24px. Dono cos de lletra més gran perquè destaqui */
+  padding: 0.3125rem 0 0 1.875rem; /* 5px 0 0 30px */
+  transition: all .5s ease-in-out; /* transició sempre en l'estat de repòs */
+}
+nav.xarxes a:hover {
+  transform: scale(1.2);
+}
+
+/* MQs: per tamanys més petits: barra navegació a dalt i xarxes a sota */
+@media only screen and (max-width:992px) {
+  nav.navegacio-principal {
+    display: block;
+    text-align: center;
+    float: none;
+  }
+  nav.navegacio-principal a {
+    padding: 0.625rem 0.9375rem 0 0.9375rem; /* 10px 15px 0 15px; cal modificar padding simètric perquè centri bé */
+  }
+  nav.xarxes {
+    display: block;
+    text-align: center;
+    float: none;
+  }
+  nav.xarxes a {
+    padding: 0.625rem 0.9375rem 0 0.9375rem;
+  }
+}
+
+
+
+
+/* Bottom: Logo + Destacat */
+
+div.bottom-laptop { /* grid */
+  position: absolute;
+  bottom: 0;
+  margin: 1.25rem 5%;
+  height: 40%;
+  width: 90%;
+  padding: 1.25rem 3.125rem; /* 20px 50px */
+  display: grid;
+  grid-template-columns: 25% 75%;
+}
+
+div.logo {
+  height: 100%;
+  width: auto;
+}
+
+div.logo img {
+  max-height: 100%; /* IMPRESCINDIBLE !! */
+  width: auto;
+}
+
+div.destacado{
+  float: left;
+  margin-bottom: 0;
+  margin-left: 0;
+  align-self: end;
+}
+
+div.destacado h2{
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+/** Media queries < 600px **/
+
+@media only screen and (max-width:600px) {
+  div.top-laptop,
+  div.bottom-laptop {
+    display: none;
+  }
+}
+
+/*** B. QUI SOM ***/
+
+div.descripcio-3C {
+  float: left;
+  padding: 1.875rem; /* 30px */
+  width: 33.3%;
+  background-color: rgb(255, 255, 255);
+}
+
+div.imatge {
+  float: left;
+  width: 33.3%;
+  padding: 1.875rem; /* 30px */
+}
+
+div.imatge img {
+  width: 100%;
+  /*border-radius: 50%; */
+  border: 1.5px solid var(--granate);
+}
+
+div.descripcio-2C {
+  display: none;
+}
+
+/** Media queries < 768px **/
+
+@media only screen and (max-width:768px) {
+  div.descripcio-3C {
+    display: none;
+  }
+  div.descripcio-2C {
+    display: block;
+    float: left;
+    padding: 1.875rem; /* 30px */
+    width: 50%;
+    background-color: rgb(255, 255, 255);
+  }
+  div.imatge {
+    float: right;
+    width: 50%;
+  }
+  div.imatge img {
+    border: 1.2px solid var(--granate);
+  }
+}
+
+/*** C: PARALLAX ***/
+
+section.fustes {
+  position: relative;
+  height: auto;
+}
+section.fustes::before {
+  background-image: url(../img/DSC_0883-Tarima-dalt-1200.jpg);
+  content: '';
+}
+
+div.auxiliar {
+  position: relative; /*IMPORTANTÍSSIM!!! Sinó, no rutlla */
+  margin: 0;
+  padding: 1.25rem 3.125rem; /* 20px 50px */
+}
+
+div.descripcioB-3C{
+  float: left;
+  width: 33.3%;
+  padding: 1.875rem; /* 30px */
+}
+div.descripcioB-3C p{
+  color: rgb(255, 255, 255);
+}
+div.descripcioB-2C{
+  display: none;
+}
+
+/** Media queries < 768px **/
+
+@media only screen and (max-width:768px) {
+  div.descripcioB-3C {
+    display: none;
+  }
+  div.descripcioB-2C {
+    display: block;
+    float: left;
+    padding: 1.875rem; /* 30px */
+    width: 50%;
+  }
+  div.descripcioB-2C p{
+    color: rgb(255, 255, 255);
+  }
+}
+
+/*** D. CATALEG ***/
+
+div.quadricula {
+  width: auto;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 33.3% 33.3% 33.3%;
+}
+
+/** Media queries per quadrícula: passem a 2 columnes a <992px, sinó les imatges es veuen de seguida massa petites **/
+
+@media only screen and (max-width:992px) {
+  div.quadricula {
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+}
+
+
+section#cataleg h4 {
+  text-align: left;
+}
+
+div.producte {
+  width: auto;
+  padding: 1.875rem; /* 30px */
+}
+
+div.imatge-cataleg {
+  padding: 0.625rem; /* 10px */
+}
+
+div.imatge-cataleg img {
+  width: 100%;
+}
+
+/** ombres hover **/
+
+img.hover-shadow {
+  transition: 0.6s ease;
+}
+
+
+.hover-shadow:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*** myModal ***/
+
+/* The Modal (background) */
+/* Segmentem en funció de si la pantalla és horitzontal o vertical amb mediaqueries */
+
+@media screen and (orientation: landscape) {
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: calc(50vw - 40vh);
+    top: 10vh;
+    width: 80vh;
+    height: 80vh;
+    overflow: auto;
+    background-color: var(--granate);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2), 0 0.75rem 1.25rem 0 rgba(0, 0, 0, 0.19); /* 0 8px 16px 0, 0 12px 20px 0 */
+  }
+}
+
+@media screen and (orientation: portrait) {
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    top: calc(50vh - 40vw);
+    left: 10vw;
+    width: 80vw;
+    height: 80vw;
+    overflow: auto;
+    background-color: var(--granate);
+    box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2), 0 0.75rem 1.25rem 0 rgba(0, 0, 0, 0.19); /* 0 8px 16px 0, 0 12px 20px 0 */
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: calc(50vw - 40vh);
+  top: 10vh;
+  width: 80vh;
+  height: 80vh;
+  overflow: auto;
+  background-color: var(--granate);
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.2), 0 0.75rem 1.25rem 0 rgba(0, 0, 0, 0.19); /* 0 8px 16px 0, 0 12px 20px 0 */
+}
+
+.modal2 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 3%;
+  top: 9%;
+  padding: 0;
+  width: 80vmin;
+  height: 80vmin;
+  overflow: hidden;
+  background-color: var(--granate);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.modal3 {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  right: 35%;
+  top: 9%;
+  padding: 5px;
+  width: 80vmin;
+  height: 80vmin;
+  overflow: auto;
+  background-color: var(--granate);
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 12px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+/* imatges modals */
+.center {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+
+/* The Close Button */
+.close {
+  color: var(--granate);
+  position: absolute;
+  z-index: 2;
+  top: 0.5rem; /* 8px */
+  right: 1.125rem; /* 18px */
+  font-size: 1.875rem; /* 30px */
+  font-weight: bold;
+  transition: 0.6s ease;
+}
+
+.close:hover,
+.close:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.mySlides {
+  display: none;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  padding: 0.75rem; /* 12px */
+  margin-top: -3.125rem; /* -50px */
+  color: var(--granate);
+  font-weight: bold;
+  font-size: 1.875rem; /* 30px */
+  transition: 0.6s ease;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  color: #999;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: var(--granate);
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  padding: 0.625rem 0.75rem; /* 10px 12px */
+  position: absolute;
+  top: 0;
+}
+
+/** E. ON TROBAR **/
+
+/* En definir la secció com a classe "fustes-fons seccio parallax" heredem el comportament parallax de la secció C  */
+
+section#on-trobar h3 {
+  color: rgb(255, 255, 255);
+}
+
+div.columnes {
+  padding: 1.875rem; /* 30px */
+  -webkit-column-count: 2; /* Chrome, Safari, Opera */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2;
+  -webkit-column-gap: 3.75rem; /* 60px */ /* Chrome, Safari, Opera */
+  -moz-column-gap: 3.75rem; /* Firefox */
+  column-gap: 3.75rem;
+}
+
+div.auxiliar h5{
+  color: rgb(255, 255, 255);
+}
+div.auxiliar p{
+  color: rgb(255, 255, 255);
+  margin-bottom: 0.9375rem; /* 15px */
+}
+
+/** F. footer CONTACTE **/
+footer {
+  border-top: 1px solid rgb(255, 255, 255);
+  height: auto;
+}
+
+div.poble {
+  background-image:url(../img/DSC_0901-Malda-1200.jpg);
+  height: 100vh;
+  background-position: bottom center;
+  background-size: cover;
+  position: relative;
+}
+
+div.naming {
+  float: right;
+  padding: 3.125rem 1.875rem 0 1.875rem; /* 50px 30px 0 30px */
+}
+div.naming h3 {
+  color: rgb(255, 255, 255);
+}
+
+div.adressa {
+  float: right;
+  padding: 3.125rem 1.875rem 0 1.875rem; /* 50px 30px 0 30px */
+}
+div.adressa p {
+  color: rgb(255, 255, 255);
+}
+
+div.adressa nav {
+  margin-top: 1.25rem; /* 20px */
+  text-align: center;
+}
+div.adressa nav i {
+  color: rgb(255, 255, 255);
+  padding-right: 0.9375rem; /* 15px */
+  font-size: 1.5625rem; /* 25px */
+  transition: all .5s ease-in-out;
+}
+
+div.adressa nav i:hover {
+  transform: scale(1.2);
+}
+
+div.logo-footer {
+  float: left;
+  padding: 0 1.875rem 0 1.875rem; /* 0 30px 0 30px */
+  height: 15vw;
+  position: absolute;
+  bottom: 5rem; /* 80px */
+  transition: all .5s ease-in-out;
+}
+
+div.logo-footer:hover {
+  transform: scale(1.2);
+}
+
+div.logo-footer img {
+  max-height: 100%;
+}
+
+
+
+/* ==================================================
+Helper classes
+=============================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   https://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster */
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
